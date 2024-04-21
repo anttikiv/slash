@@ -1,0 +1,42 @@
+[
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\MyActorTest.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_slash\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\MyActorTest.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_slash\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\slash.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_slash\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\slash.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_slash\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\slash.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_slash\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	}
+]
