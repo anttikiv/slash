@@ -1,3 +1,3 @@
 # slash
-Just a practice project for UE5
-s
+Just a practice project for UE5.
+Creating openworld rpg
