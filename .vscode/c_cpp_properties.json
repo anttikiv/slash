@@ -14,7 +14,11 @@
             "cStandard": "c17",
             "cppStandard": "c++20",
             "intelliSenseMode": "msvc-x64",
-            "compileCommands": "F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default.json"
+            "compileCommands": "F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default.json",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/Source/slash/Public"
+            ]
         }
     ],
     "version": 4
