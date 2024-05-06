@@ -69,7 +69,6 @@ void ABird::Look(const FInputActionValue& Value)
 	{
 		AddControllerYawInput(LookAxisValue.X);
 		AddControllerPitchInput(LookAxisValue.Y);
-		UE_LOG(LogTemp, Warning, TEXT("wtf: mouse X: %f  Y: %f"), LookAxisValue.X, LookAxisValue.Y)
 	}
 }
 void ABird::Tick(float DeltaTime)
