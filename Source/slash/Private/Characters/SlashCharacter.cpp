@@ -9,6 +9,8 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GroomComponent.h"
+#include "Items/Item.h"
+#include "Items/Weapons/Weapon.h"
 
 
 // Sets default values
@@ -75,7 +77,15 @@ void ASlashCharacter::Look(const FInputActionValue &Value)
 	AddControllerPitchInput(LookAxisVector.Y);
 	AddControllerYawInput(LookAxisVector.X);
 }
-
+void ASlashCharacter::EKeyPressed()
+{
+	AWeapon* OverlappingWeapon = Cast<AWeapon>(OverlappingItem);
+	if (OverlappingWeapon)
+	{
+		OverlappingWeapon->Equip(GetMesh(), FName("RightHandSocket"));
+		CharacterState = ECharacterState::ECS_EquippedOneHandedWeapon;
+	}
+}
 void ASlashCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
@@ -91,7 +101,7 @@ void ASlashCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComp
 		EnhancedInputComponent->BindAction(MovementAction, ETriggerEvent::Triggered, this, &ASlashCharacter::Move);
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ASlashCharacter::Look);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Triggered, this, &ASlashCharacter::Jump);
-		//EnhancedInputComponent->BindAction(EKeyAction, ETriggerEvent::Triggered, this, &ASlashCharacter::EKeyPressed);
+		EnhancedInputComponent->BindAction(EKeyAction, ETriggerEvent::Triggered, this, &ASlashCharacter::EKeyPressed);
 		//EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Triggered, this, &ASlashCharacter::Attack);
 		//EnhancedInputComponent->BindAction(DodgeAction, ETriggerEvent::Triggered, this, &ASlashCharacter::Dodge);
 	}

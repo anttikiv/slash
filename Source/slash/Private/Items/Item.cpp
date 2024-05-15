@@ -4,6 +4,7 @@
 #include "Items/Item.h"
 #include "slash/DebugMacros.h"
 #include "Components/SphereComponent.h"
+#include "Characters/SlashCharacter.h"
 
 
 
@@ -43,18 +44,18 @@ float AItem::TransformedCos()
 
 void AItem::OnSphereOverlap(UPrimitiveComponent *OverlappedComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult &SweepResult)
 {
-	const FString OtherActorName = FString("Begin overlap: ") + OtherActor->GetName();
-	if (GEngine)
+	ASlashCharacter* SlashCharacter = Cast<ASlashCharacter>(OtherActor);
+	if (SlashCharacter)
 	{
-		GEngine->AddOnScreenDebugMessage(1, 30.f, FColor::Red, OtherActorName);
+		SlashCharacter->SetOverlappingItem(this);
 	}
 }
 void AItem::OnSphereEndOverlap(UPrimitiveComponent *OverlappedComponent, AActor *OtherActor, UPrimitiveComponent *OtherComp, int32 OtherBodyIndex)
 {
-	const FString OtherActorName = FString("Ending overlap: ") + OtherActor->GetName();
-	if (GEngine)
+	ASlashCharacter* SlashCharacter = Cast<ASlashCharacter>(OtherActor);
+	if (SlashCharacter)
 	{
-		GEngine->AddOnScreenDebugMessage(1, 30.f, FColor::Blue, OtherActorName);
+		SlashCharacter->SetOverlappingItem(nullptr);
 	}
 }
 void AItem::Tick(float DeltaTime)

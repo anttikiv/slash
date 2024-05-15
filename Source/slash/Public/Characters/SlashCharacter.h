@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "InputActionValue.h"
+#include "Characters/CharacterTypes.h"
 #include "SlashCharacter.generated.h"
 
 class UInputMappingContext;
@@ -12,6 +13,8 @@ class UInputAction;
 class USpringArmComponent;
 class UCameraComponent;
 class UGroomComponent;
+class AItem;
+
 
 UCLASS()
 class SLASH_API ASlashCharacter : public ACharacter
@@ -51,7 +54,11 @@ protected:
 	void Move(const FInputActionValue& Value);
 	void Look(const FInputActionValue& Value);
 
+	void EKeyPressed();
+
 private:
+	ECharacterState CharacterState = ECharacterState::ECS_Unequipped;
+
 	UPROPERTY(VisibleAnywhere)
 	USpringArmComponent* SpringArm;
 
@@ -64,4 +71,10 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = Hair)
 	UGroomComponent* Eyebrows;
 
+	UPROPERTY(VisibleInstanceOnly)
+	AItem* OverlappingItem;
+
+public:
+	FORCEINLINE void SetOverlappingItem(AItem* Item){OverlappingItem = Item;}
+	FORCEINLINE ECharacterState GetCharacterState() const {return CharacterState;}
 };
