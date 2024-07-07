@@ -41,6 +41,10 @@ void ABreakableActor::Tick(float DeltaTime)
 
 void ABreakableActor::GetHit_Implementation(const FVector& ImpactPoint)
 {
+	// safeguard to protect from infinite loop in blueprint
+	if (bBroken) return;
+	bBroken = true;
+
 	UWorld* World = GetWorld();
 	if (World && TreasureClasses.Num() > 0)
 	{
