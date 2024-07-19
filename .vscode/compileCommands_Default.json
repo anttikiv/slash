@@ -1,6 +1,6 @@
 [
 	{
-		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Items\\Weapons\\Weapon.cpp",
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\DebugMacros.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
 			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
@@ -8,7 +8,15 @@
 		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Items\\Weapons\\Weapon.h",
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Breakable\\BreakableActor.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Characters\\SlashAnimInstance.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
 			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
@@ -24,7 +32,7 @@
 		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Characters\\SlashCharacter.h",
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Components\\AttributeComponent.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
 			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
@@ -32,7 +40,7 @@
 		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Pawns\\Bird.cpp",
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Enemy\\Enemy.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
 			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
@@ -40,7 +48,23 @@
 		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
 	},
 	{
-		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Pawns\\Bird.h",
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\HUD\\HealthBar.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\HUD\\HealthBarComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Interfaces\\HitInterface.cpp",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
 			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
@@ -56,7 +80,127 @@
 		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
 	},
 	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Items\\Treasure.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Items\\Weapons\\Weapon.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Private\\Pawns\\Bird.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Breakable\\BreakableActor.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Characters\\CharacterTypes.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Characters\\SlashAnimInstance.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Characters\\SlashCharacter.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Components\\AttributeComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Enemy\\Enemy.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\HUD\\HealthBar.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\HUD\\HealthBarComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Interfaces\\HitInterface.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
 		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Items\\Item.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Items\\Treasure.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Items\\Weapons\\Weapon.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"
+		],
+		"directory": "D:\\Development\\UE_5.3\\Engine\\Source"
+	},
+	{
+		"file": "F:\\Development\\UE5_projects\\slash\\Source\\slash\\Public\\Pawns\\Bird.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
 			"@F:\\Development\\UE5_projects\\slash\\.vscode\\compileCommands_Default\\slash.1.rsp"

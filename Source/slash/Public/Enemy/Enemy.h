@@ -8,6 +8,8 @@
 #include "Enemy.generated.h"
 
 class UAnimMontage;
+class UAttributeComponent;
+
 
 UCLASS()
 class SLASH_API AEnemy : public ACharacter, public IHitInterface
@@ -26,7 +28,12 @@ public:
 
 	virtual void GetHit_Implementation(const FVector& ImpactPoint) override;
 	void DirectionalHitReact(const FVector& ImpactPoint);
+
 private:
+	UPROPERTY(VisibleAnywhere)
+	UAttributeComponent* Attributes;
+
+
 
 // Animation montages
 	UPROPERTY(EditDefaultsOnly, Category = Montages)
@@ -37,7 +44,6 @@ private:
 
 	UPROPERTY(EditAnywhere, Category = VisualEffects)
 	UParticleSystem* HitParticles;
-
 	
 protected:
 	// Called when the game starts or when spawned
@@ -45,8 +51,5 @@ protected:
 
 	//Play Montages
 	void PlayHitReactMontage(const FName& SectionName);
-
-public:	
-
 
 };

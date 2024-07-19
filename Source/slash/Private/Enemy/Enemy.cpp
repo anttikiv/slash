@@ -7,6 +7,8 @@
 #include "slash/DebugMacros.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "Components/AttributeComponent.h"
+
 
 // Sets default values
 AEnemy::AEnemy()
@@ -20,6 +22,7 @@ AEnemy::AEnemy()
 	GetMesh()->SetGenerateOverlapEvents(true);
 	GetCapsuleComponent()->SetCollisionResponseToChannel(ECollisionChannel::ECC_Camera, ECollisionResponse::ECR_Ignore);
 	
+	Attributes = CreateDefaultSubobject<UAttributeComponent>(TEXT("Attributes"));
 
 }
 
@@ -28,6 +31,7 @@ void AEnemy::BeginPlay()
 {
 	Super::BeginPlay();
 	
+
 }
 
 void AEnemy::PlayHitReactMontage(const FName& SectionName)
