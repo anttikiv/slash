@@ -11,6 +11,7 @@
 class UAnimMontage;
 class UAttributeComponent;
 class UHealthBarComponent;
+class UPawnSensingComponent;
 
 
 UCLASS()
@@ -34,11 +35,17 @@ public:
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 
 private:
+	/*
+	* Components
+	*/
 	UPROPERTY(VisibleAnywhere)
 	UAttributeComponent* Attributes;
 
 	UPROPERTY(VisibleAnywhere)
 	UHealthBarComponent* HealthBarWidget;
+
+	UPROPERTY(VisibleAnywhere)
+	UPawnSensingComponent* PawnSensing;
 
 // Animation montages
 	UPROPERTY(EditDefaultsOnly, Category = Montages)
@@ -53,13 +60,54 @@ private:
 	UPROPERTY(EditAnywhere, Category = VisualEffects)
 	UParticleSystem* HitParticles;
 
+	UPROPERTY()
+	AActor* CombatTarget;
+
+	UPROPERTY(EditAnywhere)
+	double CombatRadius = 1000.f;
+
+	UPROPERTY(EditAnywhere)
+	double AttackRadius = 150.f;
 	
+	/** 
+	 * Navigation
+	*/
+	UPROPERTY()
+	class AAIController* EnemyController;
+	// current patroltarget
+	UPROPERTY(EditInstanceOnly, Category = "AI Navigation")
+	AActor*	PatrolTarget;
+
+	UPROPERTY(EditInstanceOnly, Category = "AI Navigation")
+	TArray<AActor*> PatrolTargets;
+	
+	UPROPERTY(EditAnywhere)
+	double PatrolRadius = 200.f;
+
+	FTimerHandle PatrolTimer;
+	void PatrolTimerFinished();
+	
+	UPROPERTY(EditAnywhere, Category = "AI Navigation")
+	float WaitMin = 5.f;
+	UPROPERTY(EditAnywhere, Category = "AI Navigation")
+	float WaitMax = 10.f;
+
+	EEnemyState EnemyState = EEnemyState::EES_Patrolling;
 
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
 	void Die();
+	bool InTargetRange(AActor* Target, double Radius);
+	void MoveToTarget(AActor* Target);
+	AActor* ChoosePatrolTarget();
+	
+	UFUNCTION()
+	void PawnSeen(APawn* SeenPawn);
+
+	void CheckCombatTarget();
+	void CheckPatrolTarget();
 
 	//Play Montages
 	void PlayHitReactMontage(const FName& SectionName);
