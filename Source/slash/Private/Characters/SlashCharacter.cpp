@@ -61,14 +61,6 @@ void ASlashCharacter::BeginPlay()
 	}
 	Tags.Add(FName("SlashCharacter"));
 }
-void ASlashCharacter::SetWeaponCollisionEnabled(ECollisionEnabled::Type CollisionEnabled)
-{
-	if (EquippedWeapon && EquippedWeapon->GetWeaponBox())
-	{
-		EquippedWeapon->GetWeaponBox()->SetCollisionEnabled(CollisionEnabled);
-		EquippedWeapon->IgnoreActors.Empty();
-	}
-}
 
 void ASlashCharacter::Move(const FInputActionValue &Value)
 {
